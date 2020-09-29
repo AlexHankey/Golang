@@ -14,12 +14,11 @@ type Stringer interface {
 	String() string
 }
 func (w *Wallet) Deposit (amount Bitcoin)  {
-	fmt.Printf("address of balance in deposit is %v \n", &w.balance)
 	w.balance += amount
 }
 func (w *Wallet) Withdraw(amount Bitcoin) error {
 	if amount > w.balance {
-		return errors.New("Poor ass")
+		return errors.New("Cannot Withdraw, you're too poor")
 	}
 
 	w.balance -= amount
