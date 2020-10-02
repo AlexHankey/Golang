@@ -63,5 +63,29 @@ func main() {
 	mySlice2 := []int{}
 	fmt.Println("mySlice1", len(mySlice1))
 	fmt.Println("mySlice2", len(mySlice2))
-	
+
+	var x []int
+	fmt.Println(x, len(x), cap(x))
+	x = append(x, 6, 7, 8, 9)
+	fmt.Println(x, len(x), cap(x))
+
+	//newSlice := []int{10, 20, 30, 40, 50}
+	//fmt.Println(newSlice)
+	//
+	//newnewSlice = append(newSlice)
+	//fmt.Println(newSlice)
+
+	var vals [20]int
+	for i := 0; i < 5; i++ {
+		vals[i] = i * i
+	}
+	subsetLen := 5
+
+	fmt.Println("The subset of our array has a length of:", subsetLen)
+
+	// Add a new item to our array
+	vals[subsetLen] = 123
+	subsetLen++
+	fmt.Println("The subset of our array has a length of:", subsetLen)
+
 }
