@@ -75,17 +75,45 @@ func main() {
 	//newnewSlice = append(newSlice)
 	//fmt.Println(newSlice)
 
-	var vals [20]int
-	for i := 0; i < 5; i++ {
-		vals[i] = i * i
-	}
-	subsetLen := 5
+	//var vals [20]int
+	//for i := 0; i < 5; i++ {
+	//	vals[i] = i * i
+	//}
+	//subsetLen := 5
+	//
+	//fmt.Println("The subset of our array has a length of:", subsetLen)
+	//
+	//// Add a new item to our array
+	//vals[subsetLen] = 123
+	//subsetLen++
+	//fmt.Println("The subset of our array has a length of:", subsetLen)
 
-	fmt.Println("The subset of our array has a length of:", subsetLen)
 
-	// Add a new item to our array
-	vals[subsetLen] = 123
-	subsetLen++
-	fmt.Println("The subset of our array has a length of:", subsetLen)
+	s := []int{2, 3, 5, 7,11, 13}
+	printSlice(s)
 
+	s = s[:0]
+	printSlice(s)
+
+	s = s[:4]
+	printSlice(s)
+
+	s = s[2:]
+	printSlice(s)
+	///////////////////////////////////////
+	var slice []int
+	slice = make([]int, 0, 10)
+	slice = append(slice,1)
+	slice[0] = 2
+	fmt.Println(slice)
+
+
+	newSlice := make([]int, 2, 5)
+	fmt.Printf("length:  %d - capacity %d - content:  %d", len(newSlice), cap(newSlice), newSlice)
+
+
+
+}
+func printSlice(s []int)  {
+	fmt.Printf("length= %d capacity= %d %v \n", len(s), cap(s), s)
 }
