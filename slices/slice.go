@@ -94,7 +94,18 @@ func main()  {
 
 	fmt.Println(vals)
 
+	fmt.Println(keys(map[string]struct{}{
+		"dog": {},
+		"cat": {},
+	}))
 }
-func printSlice(s []int) {
-	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+func keys(m map[string]struct{}) []string {
+	ret := make([]string, 0, len(m))
+	for key := range m {
+		ret = append(ret, key)
+	}
+	return ret
 }
+//func printSlice(s []int) {
+//	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+//}
