@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 //point to Memory address &
-// Read through Memory address *
+//Read through Memory address *
 
 func main() {
 	x := 15
@@ -16,5 +16,4 @@ func main() {
 	*a = *a * *a // 5 * 5 = 25
 	fmt.Println(x)
 	fmt.Println(*a)
-
 }
